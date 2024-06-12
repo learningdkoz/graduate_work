@@ -1,0 +1,8 @@
+package com.example.graduate_work;
+
+
+public class Main {
+    public static void main(String[] args) {
+        HelloApplication.main(args);
+    }
+}

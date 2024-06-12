@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainPage" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="983.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graduate_work.MainController">
+   <children>
+      <MenuButton fx:id="selectA" alignment="CENTER" layoutX="514.0" layoutY="9.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="156.0" style="-fx-background-color: black;" text="Change &quot;A&quot;" textFill="WHITE">
+        <items>
+          <MenuItem fx:id="nu6" mnemonicParsing="false" onAction="#clickOn6nu" text="A = -6ν" />
+          <MenuItem fx:id="hi10" mnemonicParsing="false" onAction="#onClick10hi" text="A = -10𝜒" />
+        </items>
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </MenuButton>
+      <LineChart fx:id="mainChart" alternativeColumnFillVisible="true" animated="false" createSymbols="false" layoutX="263.0" layoutY="83.0" prefHeight="437.0" prefWidth="658.0">
+        <xAxis>
+          <NumberAxis autoRanging="false" side="TOP" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis autoRanging="false" lowerBound="-2.0" side="RIGHT" upperBound="2.0" />
+        </yAxis>
+      </LineChart>
+      <Text fx:id="nuValue" layoutX="29.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ν" wrappingWidth="221.03948211669922">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="hiValue" layoutX="29.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="χ" wrappingWidth="221.0394821166991">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="pValue" layoutX="453.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pᵣ" textAlignment="CENTER" wrappingWidth="277.33673095703125">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="bettaValue" layoutX="29.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="β" wrappingWidth="221.0394821166991">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nuField" layoutX="29.0" layoutY="145.0" />
+      <TextField fx:id="hiField" layoutX="30.0" layoutY="252.0" />
+      <TextField fx:id="bettaField" layoutX="31.0" layoutY="356.0" />
+      <Button fx:id="printButton" disable="true" layoutX="75.0" layoutY="404.0" mnemonicParsing="false" onAction="#clickPrintButton" style="-fx-background-color: black;" text="Print" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="P0hi" layoutX="8.0" layoutY="465.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: black;" text="P₀" textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="T0hi" layoutX="58.0" layoutY="465.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: black;" text="T₀" textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="P11hi" layoutX="110.0" layoutY="465.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: black;" text="P₁₁" textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="T11hi" layoutX="159.0" layoutY="465.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: black;" text="T₁₁" textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="P0nu" layoutX="10.0" layoutY="465.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: black;" text="P₀" textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="T0nu" layoutX="58.0" layoutY="465.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: black;" text="T₀" textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="lx" layoutX="745.0" layoutY="21.0" prefHeight="26.0" prefWidth="42.0" />
+      <TextField fx:id="ux" layoutX="798.0" layoutY="21.0" prefHeight="26.0" prefWidth="42.0" />
+      <Text layoutX="718.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="xAxis" />
+      <Text layoutX="787.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to" />
+      <TextField fx:id="ly" layoutX="745.0" layoutY="54.0" prefHeight="26.0" prefWidth="42.0" />
+      <TextField fx:id="uy" layoutX="798.0" layoutY="54.0" prefHeight="26.0" prefWidth="42.0" />
+      <Text layoutX="716.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="yAxis" />
+      <Text layoutX="787.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to" />
+      <Button fx:id="changeAxis" layoutX="842.0" layoutY="32.0" mnemonicParsing="false" onAction="#onClickChangeAxis" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: black;" text="Change" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
